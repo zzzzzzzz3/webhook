@@ -63,7 +63,7 @@ router.post('/pull',async (ctx,next)=>{
             HOME:process.env.HOME
         }
     },(err,stderr,stdout)=>{
-        console.log(err.toString()); 
+        console.log(err); 
 	if(err){
             ctx.body = `--------------change error-------------\n${err.toString()}\n`;
 	}else{
@@ -76,4 +76,4 @@ app.use(router.routes());
 
 
 app.listen(3001);
-console.log('app started at port 3000');
+console.log('app started at port 3001');
